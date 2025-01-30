@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image chng</title>
+    <style>
+        .main{
+            gap: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        .con {
+            background-image: url("img/img1.png");
+            object-fit: cover;
+            object-position: 2px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            /* margin: 5% auto; */
+            width: 500px;
+            height: 300px;
+            border-radius: 20px;
+            border: 2px solid lightskyblue;
+        }
+
+        .btn{
+            padding: 10px;
+
+        }
+    
+        button{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: blue;
+            color: white;
+            border: 2px solid lightskyblue;
+            height: 50px;
+            width: 150px;
+            font-size: large;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* #chngimg :hover{
+            background-color: lightskyblue;
+            color: black;
+            border: 2px solid blue;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Nature Love ❤️</h1>
+        <div class="con">
+            </div>
+            <div>
+                  <button id="chngimg">Sun View</button>
+                </div>
+    </div>
+
+    <script>
+        const main = document.querySelector(".con");
+        const chngimg = document.querySelector("#chngimg");
+
+        let flag = 0; //OFF
+
+        chngimg.addEventListener("click" , () => {
+            // ON
+            if (flag == 0) {
+                main.style.backgroundImage = "url('img/img2.png')";
+                chngimg.innerText="SunRise";
+
+                flag = 1  // ON
+            }else {
+                // OFF
+                main.style.backgroundImage = "url('img/img3.png')";
+                chngimg.innerText="SunSet";
+
+                flag = 0  // OFF
+            }
+        })
+
+    </script>
+        
+    </script>
+</body>
+</html>
